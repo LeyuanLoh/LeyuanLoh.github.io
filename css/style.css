@@ -162,10 +162,16 @@ hr.portfolio {
     border-top: 0.00001rem solid #505962;
 }
 
+.captionPortfolio .container {
+    display: flex;
+    justify-content: center;
+}
+
 .captionPortfolio .application {
+    display: block;
     float: left;
     width: 15rem;
-    margin: 4rem 4rem 2rem 4rem;
+    margin: 4rem auto auto auto;
 }
 
 .captionPortfolio img {
@@ -182,8 +188,6 @@ hr.portfolio {
 }
 
 #portfolio
-
-
 /*=======================Portfolio========================= */
 
 
@@ -197,7 +201,7 @@ hr.portfolio {
 #resume {
     width: 100%;
     max-width: 100%;
-    height: 100vh;
+    height: 150vh;
     position: relative;
     top: 100vh;
     background-color: rgb(20, 40, 51);
@@ -237,7 +241,7 @@ hr.resume {
 #contact {
     width: 100%;
     max-width: 100%;
-    height: 90vh;
+    height: 100vh;
     position: relative;
     top: 100vh;
     color: black;
@@ -259,9 +263,14 @@ hr.contact {
 }
 
 .captionContact .row1 {
-    margin-top: 3rem;
+    position: absolute;
+    /*Can also be `fixed`*/
     width: 100%;
+    margin: 0;
+    top: 50%;
     line-height: 2.5rem;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .captionContact .column1 {
@@ -275,20 +284,30 @@ hr.contact {
 }
 
 .captionContact h5 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
 .captionContact h6 {
-    font-size: 1.2rem;
+    font-size: 1.9rem;
 }
 
 .captionContact p,
 a {
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-decoration: none;
-    !important;
     color: black;
+}
+
+.captionContact .contactContent {
+    height: auto;
+    position: absolute;
+    /*Can also be `fixed`*/
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: 50%;
+    margin: auto;
 }
 
 .row1:after {
@@ -297,13 +316,13 @@ a {
     clear: both;
 }
 
-.copyright p {
-    position: absolute;
-    bottom: 0;
-}
-
 .captionContact a:hover {
     color: darkgoldenrod;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0%;
 }
 
 
